@@ -5,11 +5,11 @@ jobs:
     runs-on: ubuntu-latest
     name: A job to say hello
     steps:
+    # This step checks out a copy of your repository.
+    - uses: actions/checkout@v2
     - name: Hello world action step
       id: hello
-      # This step checks out a copy of your repository.
-      - uses: actions/checkout@v2
-      - uses: ./.github/actions/docker_action
+      uses: ./.github/actions/docker_action
       with:
         who-to-greet: 'Mona the Octocat'
     # Use the output from the `hello` step
