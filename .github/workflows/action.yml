@@ -2,16 +2,19 @@
 name: 'Hello World'
 description: 'Greet someone and record the time'
 on: [push, pull_request]
-inputs:
-  who-to-greet:  # id of input
-    description: 'Who to greet'
-    required: true
-    default: 'World'
-outputs:
-  time: # id of output
-    description: 'The time we greeted you'
-runs:
-  using: 'docker'
-  image: 'Dockerfile'
-  args:
-    - ${{ inputs.who-to-greet }}
+
+jobs:
+  build:
+    inputs:
+      who-to-greet:  # id of input
+        description: 'Who to greet'
+        required: true
+        default: 'World'
+    outputs:
+      time: # id of output
+        description: 'The time we greeted you'
+    runs:
+      using: 'docker'
+      image: 'Dockerfile'
+      args:
+        - ${{ inputs.who-to-greet }}
