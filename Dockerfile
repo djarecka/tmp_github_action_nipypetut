@@ -4,3 +4,4 @@ USER root
 
 RUN apt-get update -qq && apt-get install -y -q python
 
+COPY [".", "/code"]
