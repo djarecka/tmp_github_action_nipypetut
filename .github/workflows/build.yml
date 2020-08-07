@@ -32,3 +32,12 @@ jobs:
     - uses: satackey/action-docker-layer-caching@v0.0.5
     - name: run short
       run: docker run test_short python /code/code.py
+
+  run_job_2:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - uses: satackey/action-docker-layer-caching@v0.0.5
+    - name: run short
+      run: docker run test_short python /code/code.py
