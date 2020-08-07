@@ -24,5 +24,6 @@ jobs:
     - name: build short
       run: docker build . --file Dockerfile_short -t test_short:latest
 
+  run:
     - name: run short
       run: docker run test_short python /code/code.py
