@@ -1,5 +1,6 @@
-# Container image that runs your code
-FROM alpine:3.10
+FROM neurodebian:stretch-non-free
 
-CMD [ "ls", "-l" ]
+USER root
+
+RUN apt-get update -qq && apt-get install -y -q python
 
