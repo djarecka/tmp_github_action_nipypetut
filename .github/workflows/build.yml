@@ -16,3 +16,6 @@ jobs:
 
     - name: Build the Docker image
       run: docker build . --file Dockerfile --tag test:latest
+
+    - name: running docker
+      run: docker run test:latest bash
