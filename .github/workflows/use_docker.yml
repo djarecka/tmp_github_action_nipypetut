@@ -1,7 +1,7 @@
 on: [push]
 
 jobs:
-  using docker:
+  using_docker:
     runs-on: ubuntu-latest
     name: using docker
     steps:
