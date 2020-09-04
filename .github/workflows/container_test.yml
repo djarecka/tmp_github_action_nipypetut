@@ -13,6 +13,8 @@ jobs:
       run: uname -a
     - name: python
       run: python --version
+    - name: bash python
+      run: bash -c `python --version`
 
 
 #    - uses: actions/checkout@v2
