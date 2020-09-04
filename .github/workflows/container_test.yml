@@ -9,6 +9,9 @@ jobs:
     steps:
     - name: pwd in cont
       run: pwd
+    - name: What OS is running
+      run: uname -a
+
 
 #    - uses: actions/checkout@v2
 #    - name: Hello world action step
