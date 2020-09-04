@@ -14,7 +14,7 @@ jobs:
     - name: python
       run: python --version
     - name: bash python
-      run: bash -c `python --version`
+      run: bash -c "python --version"
 
 
 #    - uses: actions/checkout@v2
