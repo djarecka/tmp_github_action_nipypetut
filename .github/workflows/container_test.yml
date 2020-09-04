@@ -5,7 +5,7 @@ jobs:
   cont:
     runs-on: ubuntu-latest
     name: A job to say hello
-    container: ubuntu
+    container: debian
     steps:
     - name: pwd in cont
       run: pwd
