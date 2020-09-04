@@ -7,7 +7,6 @@ jobs:
     name: A job to say hello
     steps:
     - container: ubuntu
-    - name: run short
       run: pwd
 
 #    - uses: actions/checkout@v2
